@@ -64,6 +64,33 @@ function computerPlay() {
     return result;
 }
 
-const playerSelection = myPlay();
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function game () {
+    plCount = 0;
+    compCount = 0;
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = myPlay();
+        const computerSelection = computerPlay();
+        score = playRound(playerSelection, computerSelection);
+        if (score.charAt(0) === "T") {
+            plCount += 1;
+            compCount += 1;
+        }
+        else if (score.charAt(4) === 'w') {
+            plCount += 1;
+        }
+        else {
+            compCount += 1;
+        }
+        console.log("The result is = Player: ", + plCount + " , Computer: " + compCount);
+    }
+    if (plCount > compCount) {
+        console.log("The winner is: Player")
+    }
+    else if (plCount < compCount) {
+        console.log("The winner is: Computer")
+    } else {
+        console.log("Thi was a Tie!")
+    }
+}
+
+game();
