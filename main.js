@@ -1,9 +1,10 @@
 let playerScore = 0;
 let computerScore = 0;
 let annonce = "";
+let result = "";
+let weapons = "";
 
-const weapons = document.querySelectorAll('.weapon');
-
+weapons = document.querySelectorAll('.weapon');
 weapons.forEach(img => {
     img.addEventListener('click', function () {
         playRound(img.id);
@@ -11,7 +12,6 @@ weapons.forEach(img => {
 })
 
 function updateResults() {
-    let result = "";
     result = document.getElementById("player");
     result.innerHTML = playerScore;
     result = document.getElementById("computer");
@@ -24,17 +24,17 @@ function updateAnnonce() {
     txt.innerHTML = annonce;
 }
 
-play.addEventListener('click', function() {location.reload()})
+// function show(a,b) {
 
-// function playNewGame() {
-//     btn = document.querySelector("button");
-//     document.addEventListener("click", location.reload());
 // }
+
+play.addEventListener('click', function() {location.reload()});
 
 function playRound(playerSelection) {
     const computerSelection = computerPlay();
     console.log("Player Selection: ", playerSelection);
     console.log("Computer Selection: ", computerSelection);
+
     if (playerSelection === computerSelection) {
         annonce = "This is a Tie! Player: " + playerSelection + ", Computer: " + computerSelection;
         updateAnnonce();
@@ -46,9 +46,11 @@ function playRound(playerSelection) {
         updateAnnonce();
         playerScore += 1;
         updateResults();
-        if (playerScore == 5) {
+        if ((playerScore == 5) || (playerScore > 5)) {
             let finalResult = document.getElementById("summary");
             finalResult.innerHTML = "You won the Game! Congratulations!";
+            finalResult = document.getElementById("continue");
+            finalResult.innerHTML = "If you want to play more, please, press the button!";
             document.getElementById("play").disabled = false;
         }
     }
@@ -57,9 +59,11 @@ function playRound(playerSelection) {
         updateAnnonce();
         computerScore += 1;
         updateResults();
-        if (computerScore == 5) {
+        if ((computerScore == 5) || (computerScore > 5)) {
             let finalResult = document.getElementById("summary");
             finalResult.innerHTML = "You lost the Game! Play again!";
+            finalResult = document.getElementById("continue");
+            finalResult.innerHTML = "If you want to play more, please, press the button!";
             document.getElementById("play").disabled = false;
         }
     }

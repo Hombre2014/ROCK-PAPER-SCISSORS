@@ -1,11 +1,40 @@
+body {
+    background-color: azure;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: fit-content;
+}
+
 .weapon {
     width: 120px;
-    height: auto;
+    height: 120px;
+    border: rgb(128, 122, 114) 3px solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgb(194, 187, 182);
+    transition: all 0.3s;
+}
+
+.weapon:hover {
+    transform: scale(1.05);
 }
 
 #weapons {
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
+    gap: 20px;
+}
+
+#roundResult {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
 }
 
 #currentResult {
@@ -13,8 +42,42 @@
     flex-direction: row;
 }
 
-#player, #computer {
-    margin: 40px, auto;
+#player, #computer, #separator {
     font-size: 2rem;
-    min-width: 4rem;
+    
 }
+
+#continue {
+    color: rgb(192, 47, 47);
+}
+
+/* #round {
+    display: flex;
+    flex-direction: column;
+} */
+
+#separator {
+    margin: 0px 15px;
+}
+
+#size {
+    width: 120px;
+    min-height: 120px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* button {
+    padding: 10px 4px;
+    border: 2px solid rgb(31, 31, 41);
+    box-shadow: 3px 3px 2px rgb(172, 165, 165);
+    border-radius: 10px;
+    background-color: rgb(64, 67, 73);
+    color: rgb(19, 32, 32);
+}
+
+button:hover {
+    color: rgb(136, 70, 70); 
+} */
