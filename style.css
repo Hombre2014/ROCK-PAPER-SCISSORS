@@ -1,0 +1,20 @@
+.weapon {
+    width: 120px;
+    height: auto;
+}
+
+#weapons {
+    display: flex;
+    flex-direction: row;
+}
+
+#currentResult {
+    display: flex;
+    flex-direction: row;
+}
+
+#player, #computer {
+    margin: 40px, auto;
+    font-size: 2rem;
+    min-width: 4rem;
+}
