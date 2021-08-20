@@ -24,17 +24,10 @@ function updateAnnonce() {
     txt.innerHTML = annonce;
 }
 
-// function show(a,b) {
-
-// }
-
 play.addEventListener('click', function() {location.reload()});
 
 function playRound(playerSelection) {
     const computerSelection = computerPlay();
-    console.log("Player Selection: ", playerSelection);
-    console.log("Computer Selection: ", computerSelection);
-
     if (playerSelection === computerSelection) {
         annonce = "This is a Tie! Player: " + playerSelection + ", Computer: " + computerSelection;
         updateAnnonce();

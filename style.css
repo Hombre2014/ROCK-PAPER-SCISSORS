@@ -51,11 +51,6 @@ button {
     color: rgb(192, 47, 47);
 }
 
-/* #round {
-    display: flex;
-    flex-direction: column;
-} */
-
 #separator {
     margin: 0px 15px;
 }
@@ -68,16 +63,3 @@ button {
 .hidden {
     visibility: hidden;
 }
-
-/* button {
-    padding: 10px 4px;
-    border: 2px solid rgb(31, 31, 41);
-    box-shadow: 3px 3px 2px rgb(172, 165, 165);
-    border-radius: 10px;
-    background-color: rgb(64, 67, 73);
-    color: rgb(19, 32, 32);
-}
-
-button:hover {
-    color: rgb(136, 70, 70); 
-} */
