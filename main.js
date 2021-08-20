@@ -45,6 +45,13 @@ function playRound(playerSelection) {
             finalResult = document.getElementById("continue");
             finalResult.innerHTML = "If you want to play more, please, press the button!";
             document.getElementById("play").disabled = false;
+            // Trying to remove an event listerener to img elemetn, once the player gets 5 points.
+            weapons = document.querySelectorAll('.weapon');
+            weapons.forEach(img => {
+                img.addRemoveListener('click', function () {
+                    playRound(img.id);
+                })
+            })
         }
     }
     else {
@@ -58,6 +65,13 @@ function playRound(playerSelection) {
             finalResult = document.getElementById("continue");
             finalResult.innerHTML = "If you want to play more, please, press the button!";
             document.getElementById("play").disabled = false;
+            // Trying to remove an event listerener to img elemetn, once the player gets 5 points.
+            weapons = document.querySelectorAll('.weapon');
+            weapons.forEach(img => {
+                img.addRemoveListener('click', function () {
+                    playRound(img.id);
+                })
+            })
         }
     }
 }
