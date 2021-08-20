@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK-PAPER-SCISSORS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/office/16/000000/rock.png"/>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div id="container">
+        <h1>Let's play Rock - Paper - Scissors!</h1>
+        <h2>Choose your weapon. The first to 5 points wins!</h2>
+        <div id="weapons">
+            <div>
+                <img id="rock" class="weapon" src="/ROCK-PAPER-SCISSORS/img/rock.png">
+            </div>
+            <div>
+                <img id="paper" class="weapon" src="/ROCK-PAPER-SCISSORS/img/paper.png">
+            </div>
+            <div>
+                <img id="scissors" class="weapon" src="/ROCK-PAPER-SCISSORS/img/scissors.png">
+            </div>
+        </div>
+        <div id=roundResult>
+            <span class="hidden">A</span>
+        </div>
+        <h2>Results</h2>
+        <div id="currentResult">
+            <div id="player">
+                0
+            </div>
+            <span id="separator">:</span>
+            <div id="computer">
+                0
+            </div>
+        </div>
+        <h2 id="summary"><span class="hidden">A</span></h2>
+        <h3 id="continue"><span class="hidden">A</span></h3>
+        <button id="play" disabled>Play again</button>
+    </div>
     <script src="main.js"></script>
-    <h1>Let's play Rock - Paper - Scissors!</h1>
-    <script>
-        
-    </script>
 </body>
+
 </html>

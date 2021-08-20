@@ -1,0 +1,65 @@
+body {
+    background-color: azure;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: fit-content;
+}
+
+.weapon {
+    width: 120px;
+    height: 120px;
+    border: rgb(128, 122, 114) 3px solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgb(194, 187, 182);
+    transition: all 0.3s;
+}
+
+.weapon:hover {
+    transform: scale(1.05);
+}
+
+#weapons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#roundResult {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+}
+
+#currentResult {
+    display: flex;
+    flex-direction: row;
+}
+
+#player, #computer, #separator {
+    font-size: 2rem;
+    
+}
+
+#continue {
+    color: rgb(192, 47, 47);
+}
+
+#separator {
+    margin: 0px 15px;
+}
+
+#size {
+    width: 120px;
+    min-height: 120px;
+}
+
+.hidden {
+    visibility: hidden;
+}
